@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR.js Example</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        #arjs-debug { display: none; }
+    </style>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+    <!-- AR.js Scene Setup -->
+    <a-scene embedded arjs>
+        <!-- Define the marker (e.g., 'hiro') -->
+        <a-marker preset="hiro">
+            <!-- Replace the red box with your 3D model -->
+           <a-entity 
+    gltf-model="url(models/myModel.glb)" 
+    scale="1 1 1" 
+    position="0 0.5 0" 
+    rotation="0 0 0" 
+    allow-interaction>
+</a-entity>
+
+   </a-entity>
+
+        </a-marker>
+        
+        <!-- Define the camera (inside <a-scene>) -->
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
+
